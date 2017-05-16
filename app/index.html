@@ -9,11 +9,14 @@
          content must come *after* these tags -->
 	<title>Video Store</title>
 	<!-- Bootstrap -->
+
+	<!-- build:css styles/main.css -->
 	<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="styles/bootstrap-social.css" rel="stylesheet">
 	<link href="styles/mystyles.css" rel="stylesheet">
+	<!-- endbuild -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,38 +29,42 @@
 <body>
 	<div ​ class="container">
 		<div class="row row-content" ng-controller="homeController as homeCtrl">
-<!--		{{homeCtrl.films}}-->
-		<div class="col-xs-12">
-			<div class="media-list">
-				<div class="media" ng-repeat="film in homeCtrl.films">
-					<div class="media-left media-middle">
-						<a href="#">
-							<img class="media-object
+			<!--		{{homeCtrl.films}}-->
+			<div class="col-xs-12">
+				<div class="media-list">
+					<div class="media" ng-repeat="film in homeCtrl.films">
+						<div class="media-left media-middle">
+							<a href="#">
+								<img class="media-object
 img-thumbnail" width="150" height="150" ng-src={{film.image}} alt="video
 store">
-						</a>
-					</div>
-					<div class="media-body">
-						<h2 class="media-heading">{{film.title}}
-							<span class="label
+							</a>
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">{{film.title}}
+								<span class="label
 label-danger">{{film.release}}</span>
-							<span class="badge">{{film.price |
+								<span class="badge">{{film.price |
 currency}}</span></h2>
-						<p>{{film.description}}</p>
+							<p>{{film.description}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 
+	<!-- build:js scripts/main.js -->
 	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<!-- endbuild -->
+
+	<!--<script src="../bower_components/angular/angular.min.js"></script>
 	<script>
 		var app = angular.module('videoStore', []);
 		app.controller('homeController', function () {
-			var films = [
-				{
+			var films = [{
 					title: 'ACADEMY DINOSAUR',
 					image: 'images/academy_dinosaur.jpg',
 					length: '86',
@@ -85,7 +92,7 @@ currency}}</span></h2>
 			//hacemos publica la variable
 			this.films = films;
 		});
-	</script>
+	</script>-->
 </body>
 
 </html>
