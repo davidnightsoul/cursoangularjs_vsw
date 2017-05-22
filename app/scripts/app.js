@@ -64,8 +64,7 @@ function FeedbackController($scope) {
     }
     $scope.sendFeedback = function () {
         $scope.showMessage = false;
-        if ($scope.feedback.agree && ($scope.feedback.mychannel == "" ||
-                !$scope.feedback.mychannel)) {
+        if ($scope.feedback.agree && ($scope.feedback.mychannel == "" || !$scope.feedback.mychannel)) {
             $scope.invalidChannelSelection = true;
         } else {
             $scope.invalidChannelSelection = false;
