@@ -28,11 +28,14 @@
 
 <body>
 	<div ​ class="container">
-		<div class="row row-content" ng-controller="homeController as homeCtrl">
+		<div class="row row-content" ng-controller="HomeController as homeCtrl">
+			<button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right" type="button"> 
+				{{showDetails ? 'Hide Details':'Show Details'}}
+			</button>
 			<!--		{{homeCtrl.films}}-->
 			<div class="col-xs-12">
 				<div class="media-list">
-					<div class="media" ng-repeat="film in homeCtrl.films">
+					<div class="media" ng-repeat="film in films">
 						<div class="media-left media-middle">
 							<a href="#">
 								<img class="media-object
@@ -46,7 +49,7 @@ store">
 label-danger">{{film.release}}</span>
 								<span class="badge">{{film.price |
 currency}}</span></h2>
-							<p>{{film.description}}</p>
+							<p ng-show="showDetails">{{film.description}}</p>
 						</div>
 					</div>
 				</div>

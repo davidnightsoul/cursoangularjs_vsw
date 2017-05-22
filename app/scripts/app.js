@@ -1,6 +1,6 @@
 'use strict';
 var app = angular.module('videoStore', []);
-app.controller('homeController', function () {
+app.controller('HomeController', ['$scope', function ($scope) {
     var films = [{
             title: 'ACADEMY DINOSAUR',
             image: 'images/academy_dinosaur.jpg',
@@ -27,5 +27,9 @@ app.controller('homeController', function () {
         }
     ];
     //hacemos publica la variable
-    this.films = films;
-});
+    $scope.films = films;
+    $scope.showDetails = false;
+    $scope.toggleDetails = function () {
+        $scope.showDetails = !$scope.showDetails;
+    };
+}]);
