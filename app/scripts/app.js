@@ -1,5 +1,6 @@
 'use strict';
 var app = angular.module('videoStore', []);
+/*
 app.controller('HomeController', ['$scope', function ($scope) {
     var films = [{
             title: 'ACADEMY DINOSAUR',
@@ -34,6 +35,7 @@ app.controller('HomeController', ['$scope', function ($scope) {
         $scope.showDetails = !$scope.showDetails;
     };
 }]);
+*/
 
 app.controller('ContactController', ContactController);
 app.controller('FeedbackController', FeedbackController);
