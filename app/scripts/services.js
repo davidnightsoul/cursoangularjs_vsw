@@ -41,5 +41,5 @@ angular.module('videoStore')
 
  //       this.getFilms = function(){
  //           return  films;
-        }
+ //       }
     });
