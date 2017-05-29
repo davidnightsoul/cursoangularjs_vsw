@@ -1,6 +1,6 @@
 'use strict';
 angular.module('videoStore')
-    .service('filmService', function () {
+    .service('filmService', ['$http', 'baseURL', function($http,baseURL) {
         var films = [{
                 title: 'ACADEMY DINOSAUR',
                 image: 'images/academy_dinosaur.jpg',
@@ -28,12 +28,12 @@ angular.module('videoStore')
         ];
 
         function getFilms() {
-            return films;
+            return $http.get(baseURL+"films");
         }
 
         function getFilm(index) {
             return films[index];
-        }
+        }   
         return ({
             getFilms: getFilms,
             getFilm: getFilm
@@ -42,4 +42,4 @@ angular.module('videoStore')
  //       this.getFilms = function(){
  //           return  films;
  //       }
-    });
+    }]);

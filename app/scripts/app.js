@@ -83,3 +83,5 @@ function FeedbackController($scope) {
         }
     };
 }
+
+app.constant("baseURL","http://localhostt:3000/");
