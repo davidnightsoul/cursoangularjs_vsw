@@ -28,6 +28,7 @@
 
 <body>
 	<div ​ class="container">
+		<div ng-view="filmList.html"></div>
 		<div class="row row-content" ng-controller="HomeController as homeCtrl">
 			<button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right" type="button"> 
 				{{showDetails ? 'Hide Details':'Show Details'}}
@@ -63,6 +64,7 @@ currency}}</span></h2>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controllers.js"></script>
 	<script src="scripts/services.js"></script>
+	<script src="../bower_components/angular-route/angular-route.min.js"></script>
 	<!-- endbuild -->
 
 

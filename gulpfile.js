@@ -34,7 +34,7 @@ gulp.task('default', ['clean'], function () {
 
 //usermin
 gulp.task('usemin', ['jshint'], function () {
-    return gulp.src('./app/index.html')
+    return gulp.src(['./app/index.html', './app/filmList.html'])
         .pipe(usemin({
             css: [minifycss(), rev()],
             js: [ngannotate(),uglify(), rev()]
