@@ -6,10 +6,10 @@ Config.$inject = ['$routeProvider']
 function Config($routeProvider) {
     $routeProvider
         .when('/filmList', {
-            templateUrl: 'filmList.html',
+            templateUrl: './filmList.html',
             controller: 'HomeController'
         })
-        .otherwise('/filmList');
+        .otherwise('/');
 }
 /*
 app.controller('HomeController', ['$scope', function ($scope) {
